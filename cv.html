@@ -1,0 +1,285 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#fafafa">
+  </head>
+  <body>
+    <div class="page-container flex flex-col" style="gap: 4rem;">
+      <header
+        class="flex"
+        style="
+          flex-direction:column;
+          gap:20px;
+          align-items:start;
+      ">
+      <div class="title">
+        <div class="flex items-center" style='gap: 0.5rem'>
+          <h1 class="dev-title">Frontend DEV</h1>
+          <h1>이택우</h1>
+        </div>
+        <div class="flex items-center" style='gap: 0.5rem'>
+          <h1 class="text-theme">경력</h1>
+          <h1>기술서</h1>
+        </div>
+      </div>
+        <div class="flex flex-col items-start"
+          style="gap:12px"
+        >
+        <div>
+          <div class="flex items-center" style='gap: 0.5rem'>
+            <p style="font-weight: bold;">이메일:</p>
+            <p>leetekwoo@gmail.com</p>
+          </div>
+          <div class="flex items-center" style='gap: 0.5rem'>
+            <p style="font-weight: bold;">연락처:</p>
+            <p>+821035171584</p>
+          </div>
+        </div>
+          <div class="flex items-center" style='gap: 0.5rem'>
+            <div class="link-icon">
+              <a class="text-underline text-theme-hover"  href="/index.html">이력서</a>
+            </div>
+            <div class="link-icon">
+              <a class="text-underline text-theme-hover" href="https://teklog.site" target="_blank">기술블로그</a>
+            </div>
+            <div class="link-icon">
+              <a class="text-underline text-theme-hover" href="https://github.com/0teklee" target="_blank">깃허브</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="flex flex-col items-start" style="gap:3rem; padding-bottom: 6rem">
+        <div class="jd-container">
+          <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+            <div class="flex flex-col items-start">
+              <h2 class="company-title">(주)비씨랩스</h2>
+              <p>프론트엔드 엔지니어</p>
+            </div>
+            <p>2022.11 ~ 재직중</p>
+          </aside>
+          <article class="flex flex-col w-full" style="gap: 2rem;">
+            <div class="circle-highlight" >
+              <h2>Coinvestor</h2>
+            </div>
+            <section class="flex flex-col w-full" style="gap: 1rem;">
+              <p style="text-indent: 1rem;">
+                투자자와 트레이더를 위한 플랫폼인 <b>Coinvestor</b>, 트레이더 유저를 위한 Trading Room과 <b>UI 라이브러리</b> 및 서비스 관리 사이트를 개발 및 유지보수하고 있습니다.
+              </p>
+              <div class="tech-stack">
+                <p class="flex-shrink-none" style="font-weight: 600">사용기술</p>
+                <p>
+                  Typescript, Next.js, Recoil, React-query, TailwindCSS, Next-i18next, Jest, CircleCI, Github Actions, Storybook
+                </p>
+              </div>
+            </section>
+            <section>
+              <h3>펀드 마켓 및 펀드 상품 디테일 페이지 구현</h3>
+              <ul>
+                <li>퀀트, 스팟, 고정수익형  <b>펀드 상품 결제 기능 및 UI 공용 컴포넌트</b> 개발하여 재사용성 개선
+                  <ul>
+                    <li>펀드 결제 기능 고도화 이후 <b>펀드 상품 총 투자금 108.2% 증가</b></li>
+                  </ul>
+                </li>
+                <li><b>펀드 스케줄에 따른 UI 상태 관리 공용 클래스, 메서드를 통해 개발</b> 생산성 향상</li>
+                <li>표시 규칙 정책에 따른 수치 데이터 가공 <b>공용 로직 개발</b>하여 정확한 정보 전달</li>
+                <li>디테일 페이지의 댓글 기능을 공용 컴포넌트로 추상화하여 레거시 코드의 복잡성 개선
+                  <ul>
+                    <li class="sub-list">댓글 기능 고도화 이후 <b>활성 사용자 15%, 댓글 참여 이벤트 65% 증가</b></li>
+                  </ul>
+                </li>
+                <li>마켓, 펀드 상품 디테일 페이지 <a
+                  href="https://www.teklog.site/blog/42"
+                  target="_blank"
+                  class="external-link text-theme-hover">사용자 경험 향상을 위한 성능 개선</a>
+                  <ul>
+                    <li class="sub-list">SSR에서 ISR로 전환 및 prefetch 적용하여 <b>lighthouse score 67 -> 95 - 100</b>으로 개선</li>
+                    <li class="sub-list"><b>페이지 전체 로딩 속도를 약 70% (1.312s -> 399ms) 개선</b>하여 사용자 경험을 개선</li>
+                    <li class="sub-list">알고리즘 상품 디테일 페이지 : <b>LCP 80%</b> (2.1 -> 0.4s) <b>CLS 35%</b> (0.416 -> 0.063) 개선</li>
+                    <li class="sub-list">매뉴얼 상품 디테일 페이지 : <b>LCP 50%</b> (1.8 -> 0.8s) , <b>CLS 76%</b> (0.762 -> 0) 개선</li>
+                    <li class="sub-list"><b>초기 로딩의 hydration 단계를 81% 단축</b> (1s -> 189.58ms)</li>
+                    <li class="sub-list">펀드 데이터 업데이트 시간에 맞춰 API 호출하도록 <b>적절한 캐싱으로 최적화</b></li>
+                    <li class="sub-list">번들링 사이즈 최적화 및 fallback, skeleton ui 개발</li>
+                    <li class="sub-list">React-Query 도입 및 레거시 코드를 함수형으로 전환하여 개발 생산성 향상</li>
+                  </ul>
+                </li>
+                <li>펀드 마켓과 펀드 결제 컴포넌트 <b>모바일 기기 반응형 작업</b>으로 사용성 개선</li>
+                <li>펀드 디테일 페이지의 share, favorite, pdf download 구현하여 사용자 경험 강화</li>
+              </ul>
+            </section>
+            <section>
+              <h3>코드 품질 및 개발 생산성 개선</h3>
+              <ul>
+                <li>리브랜딩과 함께 Next.js로 마이그레이션.
+                  <ul>
+                    <li class="sub-list"><b class="highlight">서버사이드 렌더링</b> 도입 및 세미나와 문서화를 통해 <a
+                      href="https://www.teklog.site/blog/28"
+                      target="_blank"
+                      class="external-link text-theme-hover">팀원 숙련도 향상에 기여</a></li>
+                  </ul>
+                </li>
+                <li>마이 월렛 페이지의 유저 <b>환전, 송금 기능 구현</b> 및 리팩터링을 통한 코드 개선</li>
+                <li><b>커뮤니티 페이지 고도화 작업 이후 활성 사용자 15%, 참여 이벤트 65% 증가</b>
+                  <ul>
+                    <li class="sub-list"><b>댓글 구글 번역을 통해 글로벌 사용자 커뮤니티 개선</b></li>
+                    <li class="sub-list">댓글 공용 컴포넌트 재사용 및 react-query 도입하여 레거시 코드 유지 보수성 개선</li>
+                    <li class="sub-list">댓글 삭제, 신고하기, 이미지 및 gif 업로드로 사용성 개선</li>
+                  </ul>
+                </li>
+                <li>다국어 대응: 운영 팀과 협업하여 6개 언어를 지원하여 <b>글로벌 사용자 접근성 향상</b>
+                  <ul>
+                    <li class="sub-list">next-i18next 사용하여 <b>서버사이드 다국어 적용</b></li>
+                    <li class="sub-list">Next.js 기반 다국어 라우팅 지원</li>
+                  </ul>
+                </li>
+                <li>Trader 사용자의 펀드 <b>관리 대시보드 및 펀드 생성 사이트</b> 별도 도메인으로 구축
+                <ul>
+                  <li class="sub-list">펀드를 운영하는 Trader 유저가 상품을 등록할 수 있는 Create Strategy 페이지 개발</li>
+                  <li class="sub-list">사용자가 생성한 상품을 모니터링 및 관리 할 수 있는 Strategy List 페이지 개발</li>
+                  <li class="sub-list"> Circle ci를 통한 배포 관리 및 유지 보수</li>
+                </ul>
+                </li>
+                <li><b>백오피스 개발</b>: Coinvestor와 펀드 상품 관리를 위한 관리자 페이지 개발을 맡아, 운영팀과 Trader, Affiliate 사용자 레벨이 이용할 수 있도록 개발 및 유지보수했습니다.
+                <ul>
+                  <li class="sub-list">퀀트 펀드 상품의 정산 이력을 관리하는 'Quant History' 페이지 개발</li>
+                  <li class="sub-list">퀀트 상품의 위험 지표를 모니터링하고 설정할 수 있는 'Monitoring' 페이지 개발</li>
+                  <li class="sub-list">Affiliate 사용자를 관리하는 User Management 개발</li>
+                  <li class="sub-list">레거시 코드 리팩터링: react-query 도입, 컴포넌트 추상화 및 props 구조 개선하여 deps 낮추는 등 복잡성을 낮추어 코드 유지 보수성 개선</li>
+                </ul>
+              </ul>
+            </section>
+            <section>
+              <h3>코드 품질 및 개발 생산성 개선</h3>
+              <ul>
+                <li>Circle CI와 Vercel을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 문서화로 협업 강화</li>
+                <li>백엔드 OAuth 중앙 인증 서버로 도입으로 프론트 대응 </li>
+                <li><span class="highlight" style="font-weight: 600">인증 로직 및 에러 바운더리 개선</span>
+                  <ul>
+                    <li class="sub-list"><b>문제 진단:</b> 예외처리가 제대로 되지 않아 특정 페이지 전체의 ui가 깨지는 버그 발견. 특정 api의 상태코드 200 에러 응답과 예외처리가 누락된 클라이언트 코드를 파악함.
+                    <li class="sub-list"><b>해결:</b> Axios Interceptor의 에러 핸들러와 상태코드 200 에러의 예외처리 로직을 추가하여 중앙화. react-error-boundary, QueryErrorBoundary를 도입하여 에러 전파를 효율적으로 관리. 에러 toast 및 에러 fallback 컴포넌트 노출하도록 개선.
+                    <li class="sub-list">인증 토큰 만료시 <b>Refresh 토큰 재요청 로직 개선</b>. 인증 요청과 동일한 refresh 요청의 후속 처리 함수를 추상화하고, async await를 도입하여 Promise 콜백 지옥을 해결함.
+                    <li class="sub-list">에러 바운더리 개발 전 dev plan 작성하여 문서화하여 팀원들과 공유. 이 과정에서 <b>api 200 에러를 파악하여 문서화</b>
+                     <li class="sub-list">예외처리 정책이 부재한 특정 에러를 파악한 뒤, 기획자와 협업하여 예외처리 공용 정책 개선 및 문서화
+                  </ul>
+                </li>
+                <li><b>Jest를 통한 유닛, 통합 테스트 코드를 작성</b>하여 초기 개발 단계에서 버그 방지</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+        <div class="jd-container">
+          <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+            <div class="flex flex-col items-start">
+              <h2 class="company-title">(주)비씨랩스</h2>
+              <p>프론트엔드 엔지니어</p>
+            </div>
+            <p>2022.11 ~ 재직중</p>
+          </aside>
+          <article class="flex flex-col w-full" style="gap: 2rem;">
+            <h2><b class="highlight">공용 라이브러리 기여</b></h2>
+            <section class="flex flex-col w-full" style="gap: 1rem;">
+              <p style="text-indent: 1rem;">
+                <b>UI 라이브러리</b>를 개발하고 관리하며, 팀원들과 협업하여 사용성을 개선하고 있습니다.
+              </p>
+              <div class="tech-stack">
+                <p class="flex-shrink-none" style="font-weight: 600">사용기술</p>
+                <p>
+                  Typescript, React, Storybook, TailwindCSS, Rollup
+                </p>
+              </div>
+            </section>
+            <section>
+              <h3><b class="highlight">BCLabs UI Library</b></h3>
+              <ul>
+                <li>공용 UI 라이브러리 개발 및 리팩터링으로 월별 평균 <b class="highlight">Bugfix PR 42.1% 감소</b>
+                  <ul>
+                    <li class="sub-list">tailwind CSS의 custom utility classes로 디자인 시스템과 동일한 스타일 대응</li>
+                    <li class="sub-list">getSize, getColor 등 공용 utils 추상화 및 사용하지 않는 props와 컴포넌트 구조 개선하여 개발 효율성 및 성능 개선</li>
+                  </ul>
+                </li>
+                <li>모달, 버튼 등 재사용성 높은 컴포넌트 개발하여 <b>개발 시간 30% 절감</b></li>
+                <li><b>Storybook</b>을 활용한 디자인 시스템 개발로 디자이너와의 효율적인 협업 강화</li>
+                <li>모바일 기기에 최적화된 <b>반응형 공용 UI 컴포넌트 개발</b></li>
+              </ul>
+            </section>
+            <section>
+              <h3>eslint-config-bclabs</h3>
+              <ul>
+                <li>코딩 컨밴션 세미나를 주도적으로 진행한 이후 <b>문서화하여 팀에 공유</b></li>
+                <li>팀에서 합의한 코딩 컨밴션으로 lint rule 적용 및 추후 팀원들에게 피드백을 받아 수정</li>
+              </ul>
+            </section>
+            <section>
+              <h2><b class="highlight">팀 협업 및 기여</b></h2>
+              <ul>
+                <li>dev plan과 온보딩 문서화 및 세미나를 정착하여 기술 문화 개선을 주도했습니다.
+                <li>UI test 영상을 첨부하는 등 꼼꼼하게 PR 작성을 작성합니다.
+                <li>코드 리뷰로 잠재적 버그 탐지 및 활발한 논의를 통해 코드를 개선한 경험이 있습니다.
+                <li>개발 초기 단계의 리뷰에 참여해 프로젝트의 UX를 함께 개선했습니다.
+                <li>Figma, Confluence 등 각종 문서를 기반으로 디자이너, 기획자와 협업했습니다.
+              </ul>
+              </section>
+          </article>
+        </div>
+        <div class="jd-container">
+          <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+            <div class="flex flex-col items-start">
+              <h2 class="company-title">코인고스트</h2>
+              <p>프론트엔드 엔지니어</p>
+            </div>
+            <p>2022.06 ~ 2022.08</p>
+          </aside>
+          <article class="flex flex-col w-full" style="gap: 2rem;">
+            <h2>코인고스트 포털 서비스</h2>
+            <section class="flex flex-col w-full" style="gap: 1rem;">
+              <p style="text-indent: 1rem;">
+                메인 서비스였던 포털 서비스의 유지보수와 유저 월렛 개발 및 백 오피스의 신규 기능 개발 과 유지 보수 업무에 투입되었습니다.
+              </p>
+              <div class="tech-stack">
+                <p class="flex-shrink-none" style="font-weight: 600">사용기술</p>
+                <p>
+                  Typescript, Next.js, Recoil, SWR, Styled-Components, Drone CI
+                </p>
+              </div>
+            </section>
+            <section>
+              <h3>COGO WALLET 코인고스트 통합 지갑 개발</h3>
+              <ul>
+                <li>통합 지갑을 위한 모바일 마이 페이지 리뉴얼
+                <li>마이페이지 내 암호화폐, nft 지갑 컴포넌트 개발
+                <li>Wallet 공용 UI 컴포넌트 개발
+              </ul>
+            </section>
+            <section>
+              <h3>백 오피스 개발</h3>
+              <ul>
+
+                <li>유저 정보, 이벤트, 블로그, 익명 게시판 포스트 관리 페이지 개발 및 유지 보수</li>
+                  <ul>
+                    <li class="sub-list">이벤트 게시글 post, edit, delete 기능 개발</li>
+                    <li class="sub-list">유저, 포스팅 검색 필터링, 검색 기능 구현</li>
+                  </ul>
+                <li>관리 페이지의 템플릿 공용 컴포넌트 개발 및 개선</li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
