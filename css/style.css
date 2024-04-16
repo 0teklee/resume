@@ -262,6 +262,7 @@ li {
 .link-icon::before {
   content: "🔗";
   filter: brightness(0);
+  text-decoration: none !important;
 }
 
 .circle-highlight {
@@ -429,11 +430,13 @@ li {
 .external-link::before {
   content: "🔗";
   filter: brightness(0);
+  text-decoration: none !important;
 }
 
 .external-link-icon-before::before{
   content: "🔗";
   filter: brightness(0);
+  text-decoration: none !important;
 }
 
 .external-link::after {
@@ -472,21 +475,6 @@ li {
       padding: 0.1rem 0;
   }
 
-
-  .jd-container {
-      padding-top: 2rem;
-      border-top: 1px solid #e2e8f0;
-      flex-direction: column;
-      gap:1.5rem;
-  }
-
-
-  .resume-title-flex {
-    flex-direction: column;
-    align-items: start;
-  }
-
-
   .company-title, .education-title {
     width: 100%;
   }
@@ -495,12 +483,19 @@ li {
     font-size: 2rem;
   }
 
-  .job-title {
-    font-size: 1.5rem;
+  .jd-container {
+    padding-top: 2rem;
+    border-top: 1px solid #e2e8f0;
+    flex-direction: column;
+    gap:1.5rem;
   }
 
   .jd-section-gap {
     gap: 1.2rem;
+  }
+
+  .job-title {
+    font-size: 1.5rem;
   }
 
   .title, .description  {
@@ -511,6 +506,16 @@ li {
     flex-direction: column;
     align-items: start;
   }
+
+  .resume-title-flex {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .responsive-inline-block {
+    display: inline-block;
+  }
+
 }
 
 @media (max-width: 360px) {
