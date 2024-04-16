@@ -84,134 +84,13 @@ hr {
   clear: both;
 }
 
-@font-face {
-  font-family: 'LINESeedKR';
-  src: url('../font/eot/LINESeedKR-Th.eot'); /* IE9 Compat Modes */
-  src: url('../font/eot/LINESeedKR-Th.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../font/woff2/LINESeedKR-Th.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../font/woff/LINESeedKR-Th.woff') format('woff'); /* Pretty Modern Browsers */
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'LINESeedKR';
-  src: url('../font/eot/LINESeedKR-Rg.eot');
-  src: url('../font/eot/LINESeedKR-Rg.eot?#iefix') format('embedded-opentype'),
-  url('../font/woff2/LINESeedKR-Rg.woff2') format('woff2'),
-  url('../font/woff/LINESeedKR-Rg.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'LINESeedKR';
-  src: url('../font/eot/LINESeedKR-Bd.eot');
-  src: url('../font/eot/LINESeedKR-Bd.eot?#iefix') format('embedded-opentype'),
-  url('../font/woff2/LINESeedKR-Bd.woff2') format('woff2'),
-  url('../font/woff/LINESeedKR-Bd.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
 
 /* Apply the font to body or specific elements */
 body {
-  font-family: 'LINESeedKR', sans-serif;
+  font-family:  "Noto Sans KR", sans-serif;
   font-weight: 400; /* Regular weight by default */
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: underline;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  p,
-  h2,
-  h3 {
-    margin: 0 0;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
-}
 
 body {
   height: 100vh;
@@ -360,6 +239,12 @@ li {
   display: flex;
   align-items: center;
 }
+
+.section-title {
+  font-size: 12rem;
+  font-weight: 600;
+}
+
 
 .company-title {
   font-weight: 600;
@@ -514,6 +399,11 @@ li {
 
   .responsive-inline-block {
     display: inline-block;
+  }
+
+  .side-project-responsive {
+    -ms-flex-order: 2;
+    order: 2;
   }
 
 }
