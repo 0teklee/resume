@@ -396,6 +396,13 @@ li {
   }
 }
 
+.resume-title-flex {
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
 .company-title {
   font-weight: 600;
   @media (max-width: 768px) {
