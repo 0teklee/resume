@@ -162,6 +162,12 @@
               <h3>코드 품질 및 개발 생산성 개선</h3>
               <ul>
                 <li>Circle CI와 Vercel을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 문서화로 협업 강화</li>
+                <li><b>Jest를 통한 유닛, 통합 테스트 코드를 작성</b>하여 초기 개발 단계에서 버그 방지
+                  <ul>
+                    <li class="sub-list"><b>펀드 결제 프로세스 테스트 커버리지 0 -> 90.19%</b>로 개선</li>
+                    <li class="sub-list">CircleCI 배포 스크립트를 작성하여 <b>자동 테스트 환경 구축</b></li>
+                  </ul>
+                </li>
                 <li>백엔드 OAuth 중앙 인증 서버로 도입으로 프론트 대응 </li>
                 <li><span class="highlight" style="font-weight: 600">인증 로직 및 에러 바운더리 개선</span>
                   <ul>
@@ -169,10 +175,9 @@
                     <li class="sub-list"><b>해결:</b> Axios Interceptor의 에러 핸들러와 상태코드 200 에러의 예외처리 로직을 추가하여 중앙화. react-error-boundary, QueryErrorBoundary를 도입하여 에러 전파를 효율적으로 관리. 에러 toast 및 에러 fallback 컴포넌트 노출하도록 개선.
                     <li class="sub-list">인증 토큰 만료시 <b>Refresh 토큰 재요청 로직 개선</b>. 인증 요청과 동일한 refresh 요청의 후속 처리 함수를 추상화하고, async await를 도입하여 Promise 콜백 지옥을 해결함.
                     <li class="sub-list">에러 바운더리 개발 전 dev plan 작성하여 문서화하여 팀원들과 공유. 이 과정에서 <b>api 200 에러를 파악하여 문서화</b>
-                     <li class="sub-list">예외처리 정책이 부재한 특정 에러를 파악한 뒤, 기획자와 협업하여 예외처리 공용 정책 개선 및 문서화
+                    <li class="sub-list">예외처리 정책이 부재한 특정 에러를 파악한 뒤, <b>기획자와 협업하여 예외처리 공용 정책 개선 및 문서화</b></li>
                   </ul>
                 </li>
-                <li><b>Jest를 통한 유닛, 통합 테스트 코드를 작성</b>하여 초기 개발 단계에서 버그 방지</li>
               </ul>
             </section>
           </article>
