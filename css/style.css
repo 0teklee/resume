@@ -225,6 +225,16 @@ li {
   background-color: #0A98FF;
 }
 
+.intro-external-link {
+  font-size: 0.8rem;
+  color: #0A98FF;
+  cursor: pointer;
+}
+
+.intro-external-link:hover {
+  color: #666;
+}
+
 .title {
   font-size: 2em;
   font-weight: 700;
