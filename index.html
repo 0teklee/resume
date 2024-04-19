@@ -102,18 +102,62 @@
             </section>
             <h2>Coinvestor
               <a
-              href="https://www.coinvestor.co"
+              href="https://coinvestor.co"
               target="_blank"
               class="circle-highlight text-theme-hover" style="cursor: pointer">메인 서비스 개발</a></h2>
             <section>
-              <h3>리브랜딩 및 멀티 도메인 구축</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>신규 기능 개발 및 고도화</h3>
+                <span class="text-sub">2023.04 ~ current</span>
+              </div>
+              <ul>
+                <li>신규 기능 고정 수익형 펀드 상품 Earn 마켓, 구독 디테일 페이지 개발
+                <li>주요 기능 모바일 <b class="highlight">모바일 기기 반응형 페이지</b> 개발
+                  <ul>
+                    <li class="sub-list">기존 컴포넌트를 media query 최대한 활용하여 모바일, 타블렛 기기에 대응</li>
+                  </ul>
+                </li>
+                <li><b>펀드 스케줄</b>에 따른 <b>UI 상태 관리 공용 클래스, 메서드</b>를 통해 개발 생산성 향상
+                <li>
+                  SSR에서 ISR로 전환하고, 적절한 캐싱 전략을 사용하여 <b class="highlight"> 페이지 로딩 속도 약 70%</b> (1.312s -> 399ms) 단축하여 <b>참여율 5% 개선</b>  (<a href="https://www.teklog.site/blog/42" target="_blank" class="external-link text-theme-hover">회고 링크</a>)
+                  <ul>
+                    <li class="sub-list"><b>Lighthouse Score:</b> 67 -> 95 - 100</li>
+                    <li class="sub-list"><b>LCP:</b> 80% (2.1 -> 0.4s)</li>
+                    <li class="sub-list"><b>CLS:</b> 35% (0.416 -> 0.063) 개선</li>
+                    <li class="sub-list"><b>초기 로딩 속도 단축:</b> Hydration 단계 속도를 <b>1s에서 189.58ms로 81% 단축</b></li>
+                  </ul>
+                </li>
+
+                <li>디테일 페이지의 댓글 기능을 공용 컴포넌트로 추상화하여 레거시 코드의 복잡성 개선
+                  <ul>
+                    <li>인증 서버 OAuth 도입에 대응하여 <b class="highlight"> 인증 로직 및 에러 처리 개선</b>
+                      <ul>
+                        <li class="sub-list">
+                          <b>에러 바운더리 도입</b> 및 일관되지 않은 서버 에러 응답 문서화로 예외처리 효율 개선</li>
+                      </ul>
+                    </li>
+                    <li><b>Jest를 통한 유닛, 통합 테스트 코드 및 테스트 자동화 구축</b>하여 개발 단계에서 버그 사전 방지
+                      <ul>
+                        <li class="sub-list">
+                          <b>펀드 결제 프로세스 테스트 커버리지 0 -> 90.19% </b></li>
+                      </ul>
+                    </li>
+                    <li><b>Circle CI</b>와 <b>Vercel</b>을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 <b>문서화</b>로 협업 강화</li>
+                  </ul>
+              </ul>
+            </section>
+            <section>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>Coinvestor 리브랜딩 및 멀티 도메인 구축</h3>
+                <span class="text-sub">2022.11 ~ 2023.03</span>
+              </div>
               <ul>
                 <li> 랜딩, 펀드 마켓/디테일, 마이월렛, 유저 페이지 등 <b>주요 페이지 새로 구축 및 고도화</b>
                 <li><b>Next.js</b>로 마이그레이션 과정에서 주도적으로 <b class="highlight">서버사이드 렌더링</b> 도입
                   <ul>
                     <li class="sub-list"><b>아토믹 패턴 도입</b>하여 개발 효율성 개선</li>
-                    <li class="sub-list">문서화를 통해 <a
-                      href="https://www.teklog.site/blog/28"
+                    <li class="sub-list">서버사이드 렌더링 도입 시 문서화를 통해 <a
+                      href="https://teklog.site/blog/28"
                       target="_blank"
                       class="external-link-icon-before highlight text-theme-hover cursor-pointer">팀원 숙련도 향상</a>에 기여</li>
                   </ul>
@@ -126,11 +170,6 @@
                     <li class="sub-list">I18-next를 사용한 다국어 대응, 이미지, gif 업로드, 댓글 구글 번역을 통해 <b>글로벌 사용자 커뮤니티</b> 개선
                   </ul>
                 </li>
-              </ul>
-            </section>
-            <section>
-              <h3>펀드 마켓 및 펀드 상품 디테일 페이지 구현</h3>
-              <ul>
                 <li>퀀트, 스팟, 고정수익형 펀드 마켓과 디테일 페이지 서비스의 핵심 기능 개발에 참여
                 <li><b>펀드 상품 결제 기능</b> 및 <b>결제 UI 공용 컴포넌트</b> 구현하여 유지보수성 개선
                   <ul>
@@ -138,45 +177,6 @@
                   </ul>
                 </li>
                 <li><b>펀드 스케줄</b>에 따른 <b>UI 상태 관리 공용 클래스, 메서드</b>를 통해 개발 생산성 향상
-                <li>디테일 페이지의 댓글 기능을 공용 컴포넌트로 추상화하여 레거시 코드의 복잡성 개선
-              </ul>
-            </section>
-            <h2><b class="highlight">사용성 및 코드 품질 개선</b></h2>
-            <section>
-              <h3>사이트 성능 최적화 및 사용자 경험 개선</h3>
-              <ul>
-                <li>
-                  SSR에서 ISR로 전환하고, 적절한 캐싱 전략을 사용하여 <b class="highlight"> 페이지 로딩 속도 약 70%</b> (1.312s -> 399ms) 단축하여 <b>참여율 5% 개선</b>  (<a href="https://www.teklog.site/blog/42" target="_blank" class="external-link text-theme-hover">회고 링크</a>)
-                  <ul>
-                    <li class="sub-list"><b>Lighthouse Score:</b> 67 -> 95 - 100</li>
-                    <li class="sub-list"><b>LCP:</b> 80% (2.1 -> 0.4s)</li>
-                    <li class="sub-list"><b>CLS:</b> 35% (0.416 -> 0.063) 개선</li>
-                    <li class="sub-list"><b>초기 로딩 속도 단축:</b> Hydration 단계 속도를 <b>1s에서 189.58ms로 81% 단축</b></li>
-                  </ul>
-                </li>
-                <li>사용자 피드백에 따른 <b class="highlight">모바일 기기 반응형 페이지</b> 개발
-                  <ul>
-                    <li class="sub-list">기존 컴포넌트를 media query 최대한 활용하여 모바일, 타블렛 기기에 대응</li>
-                  </ul>
-                </li>
-              </ul>
-            </section>
-            <section>
-              <h3>코드 품질 및 개발 생산성 개선</h3>
-              <ul>
-                <li>인증 서버 OAuth 도입에 대응하여 <b class="highlight"> 인증 로직 및 에러 처리 개선</b>
-                  <ul>
-                    <li class="sub-list">
-                      <b>에러 바운더리 도입</b> 및 일관되지 않은 서버 에러 응답 문서화로 예외처리 효율 개선</li>
-                  </ul>
-                </li>
-                <li><b>Jest를 통한 유닛, 통합 테스트 코드 및 테스트 자동화 구축</b>하여 개발 단계에서 버그 사전 방지
-                  <ul>
-                    <li class="sub-list">
-                      <b>펀드 결제 프로세스 테스트 커버리지 0 -> 90.19% </b></li>
-                  </ul>
-                </li>
-                <li><b>Circle CI</b>와 <b>Vercel</b>을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 <b>문서화</b>로 협업 강화</li>
               </ul>
             </section>
           </article>
@@ -203,15 +203,20 @@
               </div>
             </section>
             <section>
-              <h3><b class="highlight">BCLabs UI Library</b></h3>
-              <ul>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3><b class="highlight">BCLabs UI Library</b></h3>
+                <span class="text-sub">2023.03 ~ current</span>
+              </div>              <ul>
                 <li>모달, 버튼 등 재사용성 높은 컴포넌트 개발하여 <b>개발 시간 30% 절감</b></li>
                 <li><b>Storybook</b>을 활용한 디자인 시스템 개발로 디자이너와의 효율적인 협업 강화</li>
                 <li>모바일 기기에 최적화된 <b>반응형 공용 UI 컴포넌트 개발</b></li>
               </ul>
             </section>
             <section>
-              <h3>eslint-config-bclabs</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>eslint-config-bclabs</h3>
+                <span class="text-sub">2022.12</span>
+              </div>
               <ul>
                 <li>코딩 컨밴션 세미나를 주도적으로 진행한 이후 <b>문서화하여 팀에 공유</b></li>
                 <li>팀에서 합의한 코딩 컨밴션으로 lint rule 적용 및 추후 팀원들에게 피드백을 받아 수정</li>
