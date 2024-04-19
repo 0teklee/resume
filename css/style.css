@@ -213,6 +213,11 @@ li {
   color: #0A98FF;
 }
 
+.text-sub {
+  font-size: 0.8rem;
+  color: #6d6d6d;
+}
+
 .text-indent {
   text-indent: 1rem;
 }
