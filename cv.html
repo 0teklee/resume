@@ -84,22 +84,37 @@
               </div>
             </section>
             <section>
-              <h3>펀드 마켓 및 펀드 상품 디테일 페이지 구현</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>신규 기능 개발 및 고도화</h3>
+                <span class="text-sub">2023.04 ~ current</span>
+              </div>
               <ul>
-                <li>퀀트, 스팟, 고정수익형  <b>펀드 상품 결제 기능 및 UI 공용 컴포넌트</b> 개발하여 재사용성 개선
+                <li>고정 수익형 펀트 상품 </li>
+                <li>3가지(Quant, Spot, Earn) <b>펀드 상품 결제 기능 및 UI 공용 컴포넌트</b> 개발
                   <ul>
-                    <li>펀드 결제 기능 고도화 이후 <b>펀드 상품 총 투자금 108.2% 증가</b></li>
+                    <li><b>문제 진단:</b> 기존 펀드 결제 input 컴포넌트 UX의 문제점들을 진단하여 문서화. 이후 기획자 및 디자이너와 논의한 뒤 사업팀에 전달하여 UX 정책 수정</li>
+                    <li><b>성과: </b>펀드 결제 기능 고도화 이후 <b> Google Analytics 구매 이벤트 302% 증가 및 펀드 상품 총 투자금 108.2% 증가</b></li>
                   </ul>
                 </li>
-                <li><b>펀드 스케줄에 따른 UI 상태 관리 공용 클래스, 메서드를 통해 개발</b> 생산성 향상</li>
-                <li>표시 규칙 정책에 따른 수치 데이터 가공 <b>공용 로직 개발</b>하여 정확한 정보 전달</li>
+                <li><b>펀드 스케줄에 따른 UI 상태 관리 공용 클래스, 메서드를 통해 개발</b> 생산성 향상
+                  <ul>
+                    <li class="sub-list">Quant 상품 준비/구독/운영/정산 상태 관리 로직 개발하여 펀드 마켓과 디테일 페이지의 UI 일관성 유지</li>
+                    <li class="sub-list">Spot 상품 구매/판매/취소 상태 관리 로직 개발</li>
+                  </ul>
+                </li>
+                <li>표시 규칙 정책에 따른 수치 데이터 가공 <b>공용 로직 개발</b>하여 정확한 정보 전달
+                  <ul>
+                    <li class="sub-list">Stat 컴포넌트 디자인 시스템 라이브러리에 추가 개발 및 숫자 가공 로직 개발하여 생산성 개선</li>
+                  </ul>
+                </li>
                 <li>디테일 페이지의 댓글 기능을 공용 컴포넌트로 추상화하여 레거시 코드의 복잡성 개선
                   <ul>
                     <li class="sub-list">댓글 기능 고도화 이후 <b>활성 사용자 15%, 댓글 참여 이벤트 65% 증가</b></li>
+                    <li class="sub-list">적절한 상태관리와 react-query(v4) 도입으로 레거시 컴포넌트의 <b>props drilling</b>과 <b>api 호출 시 런타임 에러</b> 해결</li>
                   </ul>
                 </li>
                 <li>마켓, 펀드 상품 디테일 페이지 <a
-                  href="https://www.teklog.site/blog/42"
+                  href="https://teklog.site/blog/42"
                   target="_blank"
                   class="external-link text-theme-hover">사용자 경험 향상을 위한 성능 개선</a>
                   <ul>
@@ -115,15 +130,35 @@
                 </li>
                 <li>펀드 마켓과 펀드 결제 컴포넌트 <b>모바일 기기 반응형 작업</b>으로 사용성 개선</li>
                 <li>펀드 디테일 페이지의 share, favorite, pdf download 구현하여 사용자 경험 강화</li>
+                <li>Circle CI와 Vercel을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 문서화로 협업 강화</li>
+                <li><b>Jest를 통한 유닛, 통합 테스트 코드를 작성</b>하여 초기 개발 단계에서 버그 방지
+                  <ul>
+                    <li class="sub-list"><b>펀드 결제 프로세스 테스트 커버리지 0 -> 90.19%</b>로 개선</li>
+                    <li class="sub-list">CircleCI 배포 스크립트를 작성하여 <b>자동 테스트 환경 구축</b></li>
+                  </ul>
+                </li>
+                <li>백엔드 OAuth 중앙 인증 서버로 도입으로 프론트 대응 </li>
+                <li><span class="highlight" style="font-weight: 600">인증 로직 및 에러 바운더리 개선</span>
+                  <ul>
+                    <li class="sub-list"><b>문제 진단:</b> 예외처리가 제대로 되지 않아 특정 페이지 전체의 ui가 깨지는 버그 발견. 특정 api의 상태코드 200 에러 응답과 예외처리가 누락된 클라이언트 코드를 파악함.
+                    <li class="sub-list"><b>해결:</b> Axios Interceptor의 에러 핸들러와 상태코드 200 에러의 예외처리 로직을 추가하여 중앙화. react-error-boundary, QueryErrorBoundary를 도입하여 에러 전파를 효율적으로 관리. 에러 toast 및 에러 fallback 컴포넌트 노출하도록 개선.
+                    <li class="sub-list">인증 토큰 만료시 <b>Refresh 토큰 재요청 로직 개선</b>. 인증 요청과 동일한 refresh 요청의 후속 처리 함수를 추상화하고, async await를 도입하여 Promise 콜백 지옥을 해결함.
+                    <li class="sub-list">에러 바운더리 개발 전 dev plan 작성하여 문서화하여 팀원들과 공유. 이 과정에서 <b>api 200 에러를 파악하여 문서화</b>
+                    <li class="sub-list">예외처리 정책이 부재한 특정 에러를 파악한 뒤, <b>기획자와 협업하여 예외처리 공용 정책 개선 및 문서화</b></li>
+                  </ul>
+                </li>
               </ul>
             </section>
             <section>
-              <h3>코드 품질 및 개발 생산성 개선</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>Coinvestor 리브랜딩 및 멀티 도메인 구축</h3>
+                <span class="text-sub">2022.11 ~ 2023.03</span>
+              </div>
               <ul>
                 <li>리브랜딩과 함께 Next.js로 마이그레이션.
                   <ul>
                     <li class="sub-list"><b class="highlight">서버사이드 렌더링</b> 도입 및 세미나와 문서화를 통해 <a
-                      href="https://www.teklog.site/blog/28"
+                      href="https://teklog.site/blog/28"
                       target="_blank"
                       class="external-link text-theme-hover">팀원 숙련도 향상에 기여</a></li>
                   </ul>
@@ -143,41 +178,19 @@
                   </ul>
                 </li>
                 <li>Trader 사용자의 펀드 <b>관리 대시보드 및 펀드 생성 사이트</b> 별도 도메인으로 구축
-                <ul>
-                  <li class="sub-list">펀드를 운영하는 Trader 유저가 상품을 등록할 수 있는 Create Strategy 페이지 개발</li>
-                  <li class="sub-list">사용자가 생성한 상품을 모니터링 및 관리 할 수 있는 Strategy List 페이지 개발</li>
-                  <li class="sub-list"> Circle ci를 통한 배포 관리 및 유지 보수</li>
-                </ul>
+                  <ul>
+                    <li class="sub-list">펀드를 운영하는 Trader 유저가 상품을 등록할 수 있는 Create Strategy 페이지 개발</li>
+                    <li class="sub-list">사용자가 생성한 상품을 모니터링 및 관리 할 수 있는 Strategy List 페이지 개발</li>
+                    <li class="sub-list"> Circle ci를 통한 배포 관리 및 유지 보수</li>
+                  </ul>
                 </li>
                 <li><b>백오피스 개발</b>: Coinvestor와 펀드 상품 관리를 위한 관리자 페이지 개발을 맡아, 운영팀과 Trader, Affiliate 사용자 레벨이 이용할 수 있도록 개발 및 유지보수했습니다.
-                <ul>
-                  <li class="sub-list">퀀트 펀드 상품의 정산 이력을 관리하는 'Quant History' 페이지 개발</li>
-                  <li class="sub-list">퀀트 상품의 위험 지표를 모니터링하고 설정할 수 있는 'Monitoring' 페이지 개발</li>
-                  <li class="sub-list">Affiliate 사용자를 관리하는 User Management 개발</li>
-                  <li class="sub-list">레거시 코드 리팩터링: react-query 도입, 컴포넌트 추상화 및 props 구조 개선하여 deps 낮추는 등 복잡성을 낮추어 코드 유지 보수성 개선</li>
-                </ul>
-              </ul>
-            </section>
-            <section>
-              <h3>코드 품질 및 개발 생산성 개선</h3>
-              <ul>
-                <li>Circle CI와 Vercel을 이용한 <b>자동 배포 환경 구축</b> 및 구축 방법 문서화로 협업 강화</li>
-                <li><b>Jest를 통한 유닛, 통합 테스트 코드를 작성</b>하여 초기 개발 단계에서 버그 방지
                   <ul>
-                    <li class="sub-list"><b>펀드 결제 프로세스 테스트 커버리지 0 -> 90.19%</b>로 개선</li>
-                    <li class="sub-list">CircleCI 배포 스크립트를 작성하여 <b>자동 테스트 환경 구축</b></li>
+                    <li class="sub-list">퀀트 펀드 상품의 정산 이력을 관리하는 'Quant History' 페이지 개발</li>
+                    <li class="sub-list">퀀트 상품의 위험 지표를 모니터링하고 설정할 수 있는 'Monitoring' 페이지 개발</li>
+                    <li class="sub-list">Affiliate 사용자를 관리하는 User Management 개발</li>
+                    <li class="sub-list">레거시 코드 리팩터링: react-query 도입, 컴포넌트 추상화 및 props 구조 개선하여 deps 낮추는 등 복잡성을 낮추어 코드 유지 보수성 개선</li>
                   </ul>
-                </li>
-                <li>백엔드 OAuth 중앙 인증 서버로 도입으로 프론트 대응 </li>
-                <li><span class="highlight" style="font-weight: 600">인증 로직 및 에러 바운더리 개선</span>
-                  <ul>
-                    <li class="sub-list"><b>문제 진단:</b> 예외처리가 제대로 되지 않아 특정 페이지 전체의 ui가 깨지는 버그 발견. 특정 api의 상태코드 200 에러 응답과 예외처리가 누락된 클라이언트 코드를 파악함.
-                    <li class="sub-list"><b>해결:</b> Axios Interceptor의 에러 핸들러와 상태코드 200 에러의 예외처리 로직을 추가하여 중앙화. react-error-boundary, QueryErrorBoundary를 도입하여 에러 전파를 효율적으로 관리. 에러 toast 및 에러 fallback 컴포넌트 노출하도록 개선.
-                    <li class="sub-list">인증 토큰 만료시 <b>Refresh 토큰 재요청 로직 개선</b>. 인증 요청과 동일한 refresh 요청의 후속 처리 함수를 추상화하고, async await를 도입하여 Promise 콜백 지옥을 해결함.
-                    <li class="sub-list">에러 바운더리 개발 전 dev plan 작성하여 문서화하여 팀원들과 공유. 이 과정에서 <b>api 200 에러를 파악하여 문서화</b>
-                    <li class="sub-list">예외처리 정책이 부재한 특정 에러를 파악한 뒤, <b>기획자와 협업하여 예외처리 공용 정책 개선 및 문서화</b></li>
-                  </ul>
-                </li>
               </ul>
             </section>
           </article>
@@ -204,7 +217,10 @@
               </div>
             </section>
             <section>
-              <h3><b class="highlight">BCLabs UI Library</b></h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3><b class="highlight">BCLabs UI Library</b></h3>
+                <span class="text-sub">2023.03 ~ current</span>
+              </div>
               <ul>
                 <li>공용 UI 라이브러리 개발 및 리팩터링으로 월별 평균 <b class="highlight">Bugfix PR 42.1% 감소</b>
                   <ul>
@@ -218,7 +234,10 @@
               </ul>
             </section>
             <section>
-              <h3>eslint-config-bclabs</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>eslint-config-bclabs</h3>
+                <span class="text-sub">2022.12</span>
+              </div>
               <ul>
                 <li>코딩 컨밴션 세미나를 주도적으로 진행한 이후 <b>문서화하여 팀에 공유</b></li>
                 <li>팀에서 합의한 코딩 컨밴션으로 lint rule 적용 및 추후 팀원들에게 피드백을 받아 수정</li>
@@ -258,7 +277,10 @@
               </div>
             </section>
             <section>
-              <h3>COGO WALLET 코인고스트 통합 지갑 개발</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>COGO WALLET 코인고스트 통합 지갑 개발</h3>
+                <span class="text-sub">2022.07 ~ 2022.08</span>
+              </div>
               <ul>
                 <li>통합 지갑을 위한 모바일 마이 페이지 리뉴얼
                 <li>마이페이지 내 암호화폐, nft 지갑 컴포넌트 개발
@@ -266,9 +288,11 @@
               </ul>
             </section>
             <section>
-              <h3>백 오피스 개발</h3>
+              <div class="flex items-center" style="gap: 1.2rem;">
+                <h3>백 오피스 개발</h3>
+                <span class="text-sub">2022.06 ~ 2022.07</span>
+              </div>
               <ul>
-
                 <li>유저 정보, 이벤트, 블로그, 익명 게시판 포스트 관리 페이지 개발 및 유지 보수</li>
                   <ul>
                     <li class="sub-list">이벤트 게시글 post, edit, delete 기능 개발</li>
