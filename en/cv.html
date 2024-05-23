@@ -1,0 +1,314 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="../css/style.css">
+  <meta name="description" content="">
+
+  <meta property="og:title" content="Frontend DEV. Taekwoo Lee's Career Description">
+  <meta property="og:url" content="https://0teklee.github.io/resume/cv">
+  <meta property="og:image" content="https://res.cloudinary.com/dolziw8fv/image/upload/v1663058798/logo_ktizgo.jpg">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <meta name="theme-color" content="#0A98FF">
+</head>
+<body>
+<div class="page-container flex flex-col" style="gap: 4rem;">
+  <header
+    class="flex"
+    style="
+          flex-direction:column;
+          gap:20px;
+          align-items:start;
+      ">
+    <div class="title">
+      <div class="flex items-center responsive-inline-block" style='gap: 0.5rem'>
+        <h1 class="dev-title">Frontend DEV</h1>
+        <h1>Taekwoo Lee</h1>
+      </div>
+      <div class="flex items-center" style='gap: 0.5rem'>
+        <h1 class="text-theme">Career</h1>
+        <h1>Description</h1>
+      </div>
+    </div>
+    <div class="flex flex-col items-start"
+         style="gap:12px"
+    >
+      <div>
+        <div class="flex items-center" style='gap: 0.5rem; margin-bottom: 1rem;'>
+          <h2 class="text-theme">EN</h2>
+          <a href="../cv.html"><h2>KR</h2></a>
+        </div>
+        <div class="flex items-center" style='gap: 0.5rem'>
+          <p style="font-weight: bold;">Email:</p>
+          <p>leetekwoo@gmail.com</p>
+        </div>
+        <div class="flex items-center" style='gap: 0.5rem'>
+          <p style="font-weight: bold;">Contact:</p>
+          <p>+821035171584</p>
+        </div>
+      </div>
+      <div class="flex items-center flex-wrap" style='gap: 0.5rem'>
+        <div class="link-icon">
+          <a class="text-underline text-theme-hover"  href="./index.html">Resume</a>
+        </div>
+        <div class="link-icon">
+          <a class="text-underline text-theme-hover" href="https://teklog.site" target="_blank">Tech Blog</a>
+        </div>
+        <div class="link-icon">
+          <a class="text-underline text-theme-hover" href="https://github.com/0teklee" target="_blank">Github</a>
+        </div>
+        <div class="link-icon">
+          <a class="text-underline text-theme-hover" href="https://https://www.leetekwoo-portfolio.site/" target="_blank">Portfolio</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="flex flex-col items-start" style="gap:3rem; padding-bottom: 6rem">
+    <div class="jd-container">
+      <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+        <div class="flex flex-col items-start">
+          <h2 class="company-title">BC Labs, Inc</h2>
+          <p>Frontend Engineer</p>
+        </div>
+        <p>2022.11 ~ Present</p>
+      </aside>
+      <article class="flex flex-col w-full" style="gap: 2rem;">
+        <div class="circle-highlight" >
+          <h2>Coinvestor</h2>
+        </div>
+        <section class="flex flex-col w-full" style="gap: 1rem;">
+          <p style="text-indent: 1rem;">
+            Developing and maintaining the platform <b>Coinvestor</b> for investors and traders, including the Trading Room for trader users and <b>UI library</b> and service management site.
+          </p>
+          <div class="tech-stack">
+            <p class="flex-shrink-none" style="font-weight: 600">Tech Stack</p>
+            <p>
+              Typescript, Next.js, Recoil, React-query, TailwindCSS, Next-i18next, Jest, CircleCI, Github Actions, Storybook
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3>New Feature Development and Enhancements</h3>
+            <span class="text-sub">2023.04 ~ current</span>
+          </div>
+          <ul>
+            <li>Participated in the UX planning stage and developed new fixed-income fund products.</li>
+            <li>Developed <b>payment features and common UI components</b> for three types of fund products (Quant, Spot, Earn)
+              <ul>
+                <li><b>Problem Diagnosis:</b> Documented UX issues of the existing fund payment input components, discussed with planners and designers, and conveyed to the business team for UX policy updates.</li>
+                <li><b>Outcome:</b> After enhancing the fund payment function, <b>Google Analytics purchase events increased by 302% and total investment in fund products increased by 108.2%</b></li>
+              </ul>
+            </li>
+            <li>Increased productivity by developing <b>common classes and methods for managing UI state according to fund schedules</b>
+              <ul>
+                <li class="sub-list">Developed logic to manage the states of Quant products (Preparation/Subscription/Operation/Settlement) to maintain UI consistency on the fund market and detail pages.</li>
+                <li class="sub-list">Developed logic to manage the states of Spot product purchase/sale/cancellation.</li>
+              </ul>
+            </li>
+            <li>Developed <b>common logic for processing numerical data according to display rules policies</b> to deliver accurate information
+              <ul>
+                <li class="sub-list">Improved productivity by adding number processing logic to the Stat component in the design system library.</li>
+              </ul>
+            </li>
+            <li>Improved the complexity of legacy code by abstracting the comment function on the detail page as a common component
+              <ul>
+                <li class="sub-list">After enhancing the comment function, <b>active users increased by 15%, and comment participation events increased by 65%</b></li>
+                <li class="sub-list">Resolved <b>props drilling</b> and <b>runtime errors during API calls</b> by introducing appropriate state management and react-query (v4).</li>
+              </ul>
+            </li>
+            <li>Enhanced user experience on the market and fund product detail pages by implementing <a
+              href="https://teklog.site/blog/42"
+              target="_blank"
+              class="external-link text-theme-hover">performance improvements</a>
+              <ul>
+                <li class="sub-list">Improved lighthouse score from 67 to 95-100 by switching from SSR to ISR and applying prefetch.</li>
+                <li class="sub-list">Improved overall page loading speed by approximately 70% (1.312s -> 399ms).</li>
+                <li class="sub-list">Improved algorithm product detail page: <b>LCP by 80%</b> (2.1 -> 0.4s), <b>CLS by 35%</b> (0.416 -> 0.063).</li>
+                <li class="sub-list">Improved manual product detail page: <b>LCP by 50%</b> (1.8 -> 0.8s), <b>CLS by 76%</b> (0.762 -> 0).</li>
+                <li class="sub-list">Reduced initial loading hydration stage by 81% (1s -> 189.58ms).</li>
+                <li class="sub-list">Optimized with appropriate caching to call APIs according to fund data update times.</li>
+                <li class="sub-list">Optimized bundling size and developed fallback, skeleton UI.</li>
+                <li class="sub-list">Improved development productivity by introducing React-Query and converting legacy code to functional components.</li>
+              </ul>
+            </li>
+            <li>Improved usability by making the market and fund payment components <b>responsive on mobile devices</b></li>
+            <li>Enhanced user experience by implementing share, favorite, and PDF download on the fund detail page.</li>
+            <li>Strengthened collaboration by establishing an <b>automatic deployment environment using Circle CI and Vercel</b> and documenting the setup process.</li>
+            <li><b>Developed unit and integration test codes using Jest</b> to prevent bugs in the early development stage.
+              <ul>
+                <li class="sub-list">Improved test coverage of the fund payment process from 0 to 90.19%</li>
+                <li class="sub-list">Established an <b>automatic test environment</b> by writing CircleCI deployment scripts.</li>
+              </ul>
+            </li>
+            <li>Adapted to backend OAuth central authentication server for frontend response.</li>
+            <li><span class="highlight" style="font-weight: 600">Improved authentication logic and error boundaries</span>
+              <ul>
+                <li class="sub-list"><b>Problem Diagnosis:</b> Found bugs causing the entire UI to break on specific pages due to improper exception handling. Identified 200 error responses and missing client code exception handling in certain APIs.</li>
+                <li class="sub-list"><b>Solution:</b> Centralized error handlers of Axios Interceptor and exception handling logic for 200 errors. Introduced react-error-boundary and QueryErrorBoundary for efficient error propagation management. Improved error toast and error fallback component exposure.</li>
+                <li class="sub-list">Improved <b>Refresh token re-request logic upon authentication token expiration</b>. Abstracted the follow-up function of the refresh request, introduced async await to resolve the Promise callback hell.</li>
+                <li class="sub-list">Documented the dev plan before developing error boundaries and shared it with team members. <b>Identified and documented API 200 errors</b> during this process.</li>
+                <li class="sub-list">Collaborated with planners to <b>improve and document common exception handling policies</b> after identifying specific unhandled errors.</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3>Coinvestor Rebranding and Multi-Domain Setup</h3>
+            <span class="text-sub">2022.11 ~ 2023.03</span>
+          </div>
+          <ul>
+            <li>Migration to Next.js along with rebranding.
+              <ul>
+                <li class="sub-list"><b class="highlight">Introduced server-side rendering</b> and contributed to improving team proficiency through seminars and documentation.</li>
+              </ul>
+            </li>
+            <li>Implemented and refactored <b>currency exchange and remittance features</b> on the My Wallet page to improve code quality.</li>
+            <li><b>Improved community page resulting in a 15% increase in active users and a 65% increase in participation events</b>
+              <ul>
+                <li class="sub-list"><b>Improved global user community through Google translation of comments</b></li>
+                <li class="sub-list">Improved maintainability of legacy code by reusing common comment components and introducing react-query.</li>
+                <li class="sub-list">Improved usability by adding comment deletion, reporting, image and GIF uploads.</li>
+              </ul>
+            </li>
+            <li>Enhanced global user accessibility by supporting six languages in collaboration with the operations team.
+              <ul>
+                <li class="sub-list">Applied <b>server-side multilingual support</b> using next-i18next.</li>
+                <li class="sub-list">Supported multilingual routing based on Next.js.</li>
+              </ul>
+            </li>
+            <li>Developed <b>fund management dashboard and fund creation site</b> as separate domains for Trader users managing funds.
+              <ul>
+                <li class="sub-list">Developed Create Strategy page for Trader users to register products.</li>
+                <li class="sub-list">Developed Strategy List page for users to monitor and manage their created products.</li>
+                <li class="sub-list">Managed deployment and maintenance using Circle CI.</li>
+              </ul>
+            </li>
+            <li><b>Back-office development:</b> Took charge of developing and maintaining the admin page for Coinvestor and fund product management, making it available to operations team, Trader, and Affiliate users.
+              <ul>
+                <li class="sub-list">Developed 'Quant History' page to manage settlement history of Quant fund products.</li>
+                <li class="sub-list">Developed 'Monitoring' page to monitor and set risk indicators of Quant products.</li>
+                <li class="sub-list">Developed User Management for managing Affiliate users.</li>
+                <li class="sub-list">Improved code maintainability by refactoring legacy code: introduced react-query, abstracted components, and improved props structure to lower dependencies.</li>
+              </ul>
+          </ul>
+        </section>
+      </article>
+    </div>
+    <div class="jd-container">
+      <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+        <div class="flex flex-col items-start">
+          <h2 class="company-title">BC Labs, Inc</h2>
+          <p>Frontend Engineer</p>
+        </div>
+        <p>2022.11 ~ Present</p>
+      </aside>
+      <article class="flex flex-col w-full" style="gap: 2rem;">
+        <h2><b class="highlight">Contributing to Common Library</b></h2>
+        <section class="flex flex-col w-full" style="gap: 1rem;">
+          <p style="text-indent: 1rem;">
+            Developing and managing the <b>UI library</b> to improve usability in collaboration with team members.
+          </p>
+          <div class="tech-stack">
+            <p class="flex-shrink-none" style="font-weight: 600">Tech Stack</p>
+            <p>
+              Typescript, React, Storybook, TailwindCSS, Rollup
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3><b class="highlight">BCLabs UI Library</b></h3>
+            <span class="text-sub">2023.03 ~ current</span>
+          </div>
+          <ul>
+            <li>Reduced <b class="highlight">Bugfix PR by 42.1% monthly</b> through developing and refactoring common UI library
+              <ul>
+                <li class="sub-list">Addressed consistent styles with the design system using custom utility classes of Tailwind CSS.</li>
+                <li class="sub-list">Improved development efficiency and performance by abstracting common utils like getSize, getColor and improving props structure and component structure by removing unused props.</li>
+              </ul>
+            </li>
+            <li>Saved <b>30% of development time</b> by developing reusable components such as modal and button.</li>
+            <li>Strengthened efficient collaboration with designers by developing a design system using <b>Storybook</b>.</li>
+            <li>Developed <b>responsive common UI components optimized for mobile devices</b>.</li>
+          </ul>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3>eslint-config-bclabs</h3>
+            <span class="text-sub">2022.12</span>
+          </div>
+          <ul>
+            <li>Led coding convention seminars and <b>documented them to share with the team</b>.</li>
+            <li>Applied lint rules according to the agreed coding conventions in the team and made adjustments after feedback from team members.</li>
+          </ul>
+        </section>
+        <section>
+          <h2><b class="highlight">Team Collaboration and Contribution</b></h2>
+          <ul>
+            <li>Led technology culture improvement by establishing and documenting dev plan and onboarding seminars.</li>
+            <li>Writes detailed PR descriptions with UI test videos attached.</li>
+            <li>Experienced in detecting potential bugs and improving code through active discussions in code reviews.</li>
+            <li>Participated in reviews at the early stages of development to improve project UX together.</li>
+            <li>Collaborated with designers and planners based on various documents such as Figma and Confluence.</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+    <div class="jd-container">
+      <aside class="flex flex-col items-start flex-shrink-none" style="gap: 8px;">
+        <div class="flex flex-col items-start">
+          <h2 class="company-title">CoinGhost</h2>
+          <p>Frontend Engineer</p>
+        </div>
+        <p>2022.06 ~ 2022.08</p>
+      </aside>
+      <article class="flex flex-col w-full" style="gap: 2rem;">
+        <h2>CoinGhost Portal Service</h2>
+        <section class="flex flex-col w-full" style="gap: 1rem;">
+          <p style="text-indent: 1rem;">
+            Was involved in maintenance and new feature development of the main service portal and user wallet development, as well as maintenance of the back office.
+          </p>
+          <div class="tech-stack">
+            <p class="flex-shrink-none" style="font-weight: 600">Tech Stack</p>
+            <p>
+              Typescript, Next.js, Recoil, SWR, Styled-Components, Drone CI
+            </p>
+          </div>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3>COGO WALLET CoinGhost Integrated Wallet Development</h3>
+            <span class="text-sub">2022.07 ~ 2022.08</span>
+          </div>
+          <ul>
+            <li>Renewed mobile my page for integrated wallet
+            <li>Developed cryptocurrency and NFT wallet components within My Page
+            <li>Developed common Wallet UI components
+          </ul>
+        </section>
+        <section>
+          <div class="flex items-center" style="gap: 1.2rem;">
+            <h3>Back Office Development</h3>
+            <span class="text-sub">2022.06 ~ 2022.07</span>
+          </div>
+          <ul>
+            <li>Developed and maintained user information, events, blogs, and anonymous board post management pages
+              <ul>
+                <li class="sub-list">Developed post, edit, and delete functions for event posts</li>
+                <li class="sub-list">Implemented search filtering and search functions for users and posts</li>
+              </ul>
+            </li>
+            <li>Developed and improved common template components for the management page</li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+</div>
+</body>
+</html>
